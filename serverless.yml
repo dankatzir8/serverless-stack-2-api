@@ -116,5 +116,7 @@ functions:
 
 # Create our resources with separate CloudFormation templates
 resources:
-# DynamoDB
+  # DynamoDB
   - ${file(resources/dynamodb-table.yml)}
+  # S3
+  - ${file(resources/s3-bucket.yml)}
