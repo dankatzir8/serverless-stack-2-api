@@ -8,6 +8,7 @@ export async function main(event, context) {
   const description = "Scratch charge";
   // Load our secret key from the  environment variables
   const stripe = stripePackage(process.env.stripeSecretKey);
+  console.log("STRIPE" + process.env.stripeSecretKey);
   try {
     await stripe.charges.create({
       source,
